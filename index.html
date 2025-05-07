@@ -20,16 +20,23 @@
     }
     header h1 {
       font-size: 2.5rem;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.5rem;
     }
     header p {
-      margin: 0.3rem 0;
+      margin: 0.5rem 0;
     }
     header a {
       color: white;
       font-weight: bold;
-      text-decoration: underline;
+      text-decoration: none;
+      margin: 0 1rem;
+      transition: color 0.3s ease, transform 0.2s ease;
     }
+    header a:hover {
+      color: #f8c471;
+      transform: scale(1.05);
+    }
+
     section {
       max-width: 1000px;
       margin: 2rem auto;
@@ -44,11 +51,11 @@
     /* About Section */
     .about {
       display: flex;
-      gap: 2rem;
+      gap: 3rem;
       align-items: center;
       background-color: #f9fbfc;
-      padding: 2rem;
-      border-radius: 12px;
+      padding: 3rem;
+      border-radius: 16px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
     }
@@ -56,17 +63,17 @@
       transform: scale(1.01);
     }
     .profile-pic {
-      width: 180px;
-      height: 180px;
+      width: 240px;
+      height: 240px;
       object-fit: cover;
       border-radius: 50%;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      flex-shrink: 0;
     }
-
     .about p {
       margin: 0;
-      font-size: 1rem;
-      line-height: 1.6;
+      font-size: 1.1rem;
+      line-height: 1.7;
     }
 
     /* Projects */
@@ -99,11 +106,7 @@
       margin-top: 0;
       color: #1c4e80;
     }
-    .project p {
-      margin: 0.4rem 0;
-    }
 
-    /* Buttons */
     .btn {
       display: inline-block;
       background-color: #1c4e80;
@@ -111,11 +114,12 @@
       padding: 0.6rem 1.2rem;
       border-radius: 8px;
       font-weight: bold;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.2s ease;
       text-decoration: none;
     }
     .btn:hover {
       background-color: #155a96;
+      transform: scale(1.03);
     }
 
     footer {
@@ -131,7 +135,11 @@
         flex-direction: column;
         text-align: center;
       }
-      .project img, .profile-pic {
+      .profile-pic {
+        width: 280px;
+        height: 280px;
+      }
+      .project img {
         width: 100%;
         height: auto;
       }
@@ -143,13 +151,13 @@
   <header>
     <h1>Alma Teresa Carpio Revilla</h1>
     <p>
-      <a href="https://www.linkedin.com/in/alma-carpio-revilla-453b72331/" target="_blank">LinkedIn</a> | 
+      <a href="https://www.linkedin.com/in/alma-carpio-revilla-453b72331/" target="_blank">LinkedIn</a>
       <a href="https://github.com/AlmaCR" target="_blank">GitHub</a>
     </p>
   </header>
 
   <section>
-    <h2>About Me</h2>
+    <h2>About me</h2>
     <div class="about">
       <img src="tu_foto.jpg" alt="Alma Carpio" class="profile-pic" />
       <div>
@@ -161,35 +169,35 @@
   </section>
 
   <section>
-    <h2>Featured Projects</h2>
+    <h2>Featured projects</h2>
 
     <div class="project">
       <img src="https://raw.githubusercontent.com/MarzyHernandez/ZazilApp/main/zazil_cover.png" alt="Zazil App">
       <div class="project-info">
-        <h3>Zazil - Menstrual Health Platform</h3>
+        <h3>Zazil - Menstrual health platform</h3>
         <p>Android app developed with Firebase and an admin web platform. Includes online store, authentication, and role-based access.</p>
         <p><strong>Technologies:</strong> Kotlin, Firebase, HTML, JavaScript</p>
-        <a href="https://github.com/MarzyHernandez/ZazilApp" class="btn" target="_blank">View Repository</a>
+        <a href="https://github.com/MarzyHernandez/ZazilApp" class="btn" target="_blank">View repository</a>
       </div>
     </div>
 
     <div class="project">
       <img src="https://raw.githubusercontent.com/A01749675/VerqorsFarmingTycoonS/main/verqor_cover.jpg" alt="Verqor Tycoon">
       <div class="project-info">
-        <h3>Educational Video Game - Verqor</h3>
+        <h3>Verqor - Educational video game</h3>
         <p>2D game to teach agricultural finance. Contributed to mechanic design, interface, and Scrum tracking.</p>
         <p><strong>Technologies:</strong> Unity, C#, Jira</p>
-        <a href="https://github.com/A01749675/VerqorsFarmingTycoonS" class="btn" target="_blank">View Repository</a>
+        <a href="https://github.com/A01749675/VerqorsFarmingTycoonS" class="btn" target="_blank">View repository</a>
       </div>
     </div>
 
     <div class="project">
       <img src="https://raw.githubusercontent.com/MarzyHernandez/TC2008B.301/main/cover.png" alt="Urban Mobility Simulation">
       <div class="project-info">
-        <h3>Urban Mobility Simulator</h3>
+        <h3>Urban mobility simulator</h3>
         <p>AI project with cognitive and reactive agents using Unity and Python to address urban traffic issues.</p>
         <p><strong>Technologies:</strong> Unity, Python (Mesa), NetLogo</p>
-        <a href="https://github.com/MarzyHernandez/TC2008B.301" class="btn" target="_blank">View Repository</a>
+        <a href="https://github.com/MarzyHernandez/TC2008B.301" class="btn" target="_blank">View repository</a>
       </div>
     </div>
 
