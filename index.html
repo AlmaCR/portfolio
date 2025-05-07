@@ -40,6 +40,36 @@
       margin-bottom: 2rem;
       color: #1d72b8;
     }
+
+    /* About Section */
+    .about {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      background-color: #f9fbfc;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .about:hover {
+      transform: scale(1.01);
+    }
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .about p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Projects */
     .project {
       background: white;
       border-radius: 12px;
@@ -50,6 +80,10 @@
       margin-bottom: 2rem;
       padding: 1.5rem;
       align-items: center;
+      transition: transform 0.3s ease;
+    }
+    .project:hover {
+      transform: scale(1.02);
     }
     .project img {
       width: 240px;
@@ -68,14 +102,22 @@
     .project p {
       margin: 0.4rem 0;
     }
-    .project a {
-      color: #1d72b8;
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      background-color: #1c4e80;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
       font-weight: bold;
+      transition: background-color 0.3s ease;
       text-decoration: none;
     }
-    .project a:hover {
-      text-decoration: underline;
+    .btn:hover {
+      background-color: #155a96;
     }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -83,12 +125,13 @@
       background-color: #d3e4f0;
       margin-top: 3rem;
     }
+
     @media (max-width: 768px) {
-      .project {
+      .project, .about {
         flex-direction: column;
         text-align: center;
       }
-      .project img {
+      .project img, .profile-pic {
         width: 100%;
         height: auto;
       }
@@ -106,10 +149,15 @@
   </header>
 
   <section>
-    <h2>About me</h2>
-    <p>
-      I am a Computer Technology Engineering student at Tecnológico de Monterrey with a strong interest in technology, project management, and computer forensics. I am passionate about leadership, strategic planning, and optimizing processes in multidisciplinary teams.
-    </p>
+    <h2>About Me</h2>
+    <div class="about">
+      <img src="tu_foto.jpg" alt="Alma Carpio" class="profile-pic" />
+      <div>
+        <p>
+          I’m a Computer Technology Engineering student at Tecnológico de Monterrey, passionate about digital forensics, project leadership, and software development. I enjoy working on strategic, user-centered solutions and collaborating in agile, multidisciplinary teams to optimize systems and create real impact.
+        </p>
+      </div>
+    </div>
   </section>
 
   <section>
@@ -121,7 +169,7 @@
         <h3>Zazil - Menstrual Health Platform</h3>
         <p>Android app developed with Firebase and an admin web platform. Includes online store, authentication, and role-based access.</p>
         <p><strong>Technologies:</strong> Kotlin, Firebase, HTML, JavaScript</p>
-        <p><a href="https://github.com/MarzyHernandez/ZazilApp" target="_blank">View Repository</a></p>
+        <a href="https://github.com/MarzyHernandez/ZazilApp" class="btn" target="_blank">View Repository</a>
       </div>
     </div>
 
@@ -131,7 +179,7 @@
         <h3>Educational Video Game - Verqor</h3>
         <p>2D game to teach agricultural finance. Contributed to mechanic design, interface, and Scrum tracking.</p>
         <p><strong>Technologies:</strong> Unity, C#, Jira</p>
-        <p><a href="https://github.com/A01749675/VerqorsFarmingTycoonS" target="_blank">View Repository</a></p>
+        <a href="https://github.com/A01749675/VerqorsFarmingTycoonS" class="btn" target="_blank">View Repository</a>
       </div>
     </div>
 
@@ -141,7 +189,7 @@
         <h3>Urban Mobility Simulator</h3>
         <p>AI project with cognitive and reactive agents using Unity and Python to address urban traffic issues.</p>
         <p><strong>Technologies:</strong> Unity, Python (Mesa), NetLogo</p>
-        <p><a href="https://github.com/MarzyHernandez/TC2008B.301" target="_blank">View Repository</a></p>
+        <a href="https://github.com/MarzyHernandez/TC2008B.301" class="btn" target="_blank">View Repository</a>
       </div>
     </div>
 
