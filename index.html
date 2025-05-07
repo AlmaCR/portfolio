@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f2f2f2;
+      background-color: #f9f9f9;
       color: #333;
       margin: 0;
       padding: 0;
@@ -15,31 +15,93 @@
     header {
       background-color: #1e90ff;
       color: white;
-      padding: 2rem;
+      padding: 3rem 1rem;
       text-align: center;
     }
-    section {
+    header h1 {
+      margin-bottom: 0.5rem;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 0.3rem 0;
+      font-size: 1.1rem;
+    }
+    .btn-link {
+      display: inline-block;
+      margin: 0.3rem 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: white;
+      color: #1e90ff;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn-link:hover {
+      background-color: #e0f0ff;
+    }
+
+    .about {
       max-width: 900px;
       margin: 2rem auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 2rem auto;
       padding: 1rem;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-    h1, h2 {
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
       margin-top: 0;
+      color: #1e90ff;
     }
-    .project {
-      margin-bottom: 1.5rem;
+
+    .card p {
+      margin: 0.5rem 0;
     }
-    .project a {
+
+    .card a {
       color: #1e90ff;
       text-decoration: none;
+      font-weight: bold;
     }
+
     footer {
       text-align: center;
-      padding: 1rem;
+      padding: 2rem 1rem;
       color: #777;
+      background-color: #f0f0f0;
+      margin-top: 3rem;
     }
   </style>
 </head>
@@ -47,32 +109,44 @@
 
   <header>
     <h1>Alma Carpio</h1>
-    <p>Ingeniera en Tecnologías Computacionales | Apasionada por la gestión de proyectos tecnológicos, el liderazgo y el cómputo forense</p>
-    <p><a href="a.carpior3@gmail.com" style="color:white;">Contáctame</a> | <a href="https://www.linkedin.com/in/alma-carpio-revilla-453b72331/" style="color:white;">LinkedIn</a> | <a href="https://github.com/AlmaCR" style="color:white;">GitHub</a></p>
+    <p>Ingeniera en Tecnologías Computacionales</p>
+    <p>Apasionada por la gestión de proyectos tecnológicos, el liderazgo y el cómputo forense</p>
+    <div>
+      <a class="btn-link" href="mailto:a.carpior3@gmail.com">Contáctame</a>
+      <a class="btn-link" href="https://www.linkedin.com/in/alma-carpio-revilla-453b72331/">LinkedIn</a>
+      <a class="btn-link" href="https://github.com/AlmaCR">GitHub</a>
+    </div>
   </header>
+
+  <div class="about">
+    <p>Soy estudiante del Tecnológico de Monterrey con interés en la informática forense, la planificación estratégica y el liderazgo de equipos multidisciplinarios. Me entusiasma participar en proyectos donde pueda optimizar procesos y aplicar tecnología con impacto.</p>
+  </div>
 
   <section>
     <h2>Proyectos destacados</h2>
+    <div class="projects">
 
-    <div class="project">
-      <h3>Zazil - Plataforma de salud menstrual</h3>
-      <p>App Android desarrollada con Firebase y una página web administrativa. Incluye tienda en línea, autenticación y sistema de roles.</p>
-      <p><strong>Tecnologías:</strong> Kotlin, Firebase, HTML, JavaScript</p>
-      <p><a href="https://github.com/tuusuario/zazil">Ver repositorio</a></p>
-    </div>
+      <div class="card">
+        <h3>Zazil - Plataforma de salud menstrual</h3>
+        <p>App Android desarrollada con Firebase y una página web administrativa. Incluye tienda en línea, autenticación y sistema de roles.</p>
+        <p><strong>Tecnologías:</strong> Kotlin, Firebase, HTML, JavaScript</p>
+        <p><a href="https://github.com/tuusuario/zazil">Ver repositorio</a></p>
+      </div>
 
-    <div class="project">
-      <h3>Simulación multi-agente - Robot de limpieza</h3>
-      <p>Simulación interactiva de agentes reactivos que limpian un entorno según parámetros definidos por el usuario.</p>
-      <p><strong>Tecnologías:</strong> Python, Mesa, Matplotlib</p>
-      <p><a href="https://github.com/tuusuario/robot-limpieza">Ver repositorio</a></p>
-    </div>
+      <div class="card">
+        <h3>Simulación multi-agente - Robot de limpieza</h3>
+        <p>Simulación interactiva de agentes reactivos que limpian un entorno según parámetros definidos por el usuario.</p>
+        <p><strong>Tecnologías:</strong> Python, Mesa, Matplotlib</p>
+        <p><a href="https://github.com/tuusuario/robot-limpieza">Ver repositorio</a></p>
+      </div>
 
-    <div class="project">
-      <h3>Videojuego educativo - Verqor</h3>
-      <p>Juego 2D para enseñar finanzas agrícolas. Participé en diseño de mecánicas, interfaz y seguimiento Scrum.</p>
-      <p><strong>Tecnologías:</strong> Unity, C#, Jira</p>
-      <p><a href="https://github.com/tuusuario/verqor-juego">Ver repositorio</a></p>
+      <div class="card">
+        <h3>Videojuego educativo - Verqor</h3>
+        <p>Juego 2D para enseñar finanzas agrícolas. Participé en diseño de mecánicas, interfaz y seguimiento Scrum.</p>
+        <p><strong>Tecnologías:</strong> Unity, C#, Jira</p>
+        <p><a href="https://github.com/tuusuario/verqor-juego">Ver repositorio</a></p>
+      </div>
+
     </div>
   </section>
 
