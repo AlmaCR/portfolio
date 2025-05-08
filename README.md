@@ -1,6 +1,6 @@
 # Alma Carpio's Portfolio
 
-Welcome to my project repository. I’m a software engineer passionate about tech project management and digital forensics.
+Welcome to my project repository. I’m a software engineer passionate about tech project management and computer forensics.
 
 🔗 Visit my full portfolio here: [almacr.github.io/portfolio](https://almacr.github.io/portfolio/)
 
